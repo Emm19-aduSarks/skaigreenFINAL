@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 require "../config.php";
 
+
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
 
