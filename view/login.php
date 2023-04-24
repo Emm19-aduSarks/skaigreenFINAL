@@ -1,3 +1,9 @@
+<?php
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,18 +46,18 @@
 <body>
   <div class="login-box">
     <img src="./view_css/images/logomain.png" class="logoligi">
-    <h2>Login</h2>
-    <form name="loginForm" onsubmit="return validateForm()" action="dashboardskaï.php">
+    <h2>Sign Up</h2>
+    <form name="loginForm" onsubmit="return validateForm()" action="../controller/useradd.php" method="POST">
       <div class="user-box">
-        <input type="text" name="name" required="">
+        <input type="text" name="name" required>
         <label>Name</label>
       </div>
       <div class="user-box">
-        <input type="email" name="email" required="">
+        <input type="email" name="email" required>
         <label>Email</label>
       </div>
       <div class="user-box">
-        <input type="password" name="password" required="">
+        <input type="password" name="password" required>
         <label>Password</label>
       </div>
       <a href="#">
@@ -59,8 +65,8 @@
         <span></span>
         <span></span>
         <span></span>
-        <button class="SUB" type="submit">Submit</button>
-      </a>
+        <button class="SUB" type="submit" name="submit">Submit</button>
+        <a href="signUp.php"><p class="signup" id="signUp-link">Have an account? login here</p></a>
     </form>
   </div>
 </body>

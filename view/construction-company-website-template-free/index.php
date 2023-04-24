@@ -79,8 +79,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="#about-main" class="nav-item nav-link">About</a>
+                    <a href="#service-main" class="nav-item nav-link">Service</a>
                     <a href="../login.php" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Signup / Login<i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
@@ -130,8 +130,8 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-6 px-5">
-        <div class="row g-5">
+    <div class="container-fluid py-6 px-5" id="about-main">
+        <div class="row g-5" >
             <div class="col-lg-7">
                 <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Leader</span> in  Farm Automation</h1>
                 <h4 class="text-uppercase mb-3 text-body">Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum tempor sit diam amet diam et eos labore</h4>
@@ -162,7 +162,7 @@
     
 
     <!-- Services Start -->
-    <div class="container-fluid bg-light py-6 px-5">
+    <div class="container-fluid bg-light py-6 px-5" id="service-main">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Services</h1>
         </div>

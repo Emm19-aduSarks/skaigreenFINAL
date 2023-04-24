@@ -6,28 +6,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
   exit();
 }
 ?>
-<?php 
-//session_start();
-
-//if (isset($_SESSION['username'])) {
-  //echo "Welcome, " . $_SESSION['username'] . "!";
-//} else {
- // header("Location: login.php");
-  //exit();
-//}
-
-   // Set the image path
-   $image_path = "/path/to/your/image.jpg";
-
-   // Run YOLO on the image and get the results
-   $results = shell_exec("python /path/to/your/yolo.py $image_path");
-
-   // Convert the results to JSON format
-   $results_json = json_encode($results);
-
-   // Return the results to the front-end HTML code
-   echo $results_json;
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,63 +16,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="./view_css/dashboardskaï.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="https://cdjns.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-    $('.click').click(function(event) {
-        event.preventDefault();
-        $('.popup_box').css({
-            "opacity": "1",
-            "pointer-events": "auto"
-        });
-    });
-    $('.btn1').click(function() {
-        $('.popup_box').css({
-            "opacity": "0",
-            "pointer-events": "none"
-        });
-    });
-    $('.btn2').click(function() {
-        $('.popup_box').css({
-            "opacity": "0",
-            "pointer-events": "none"
-        });
-        alert("Drone is in flight.");
-    });
-});
-
-    </script>
-
-<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: white;
-		}
-		h1 {
-			text-align: center;
-			margin-top: 30px;
-			color: #333;
-		}
-		table {
-			margin: 0 auto;
-			border-collapse: collapse;
-			border: 1px solid #00b415;
-			background-color: #fff;
-		}
-		th, td {
-			padding: 50px;
-			border: 1px solid #00b415;
-		}
-		th {
-			background-color: #00b415;
-			color: #fff;
-		}
-	</style>
 
 </head>
 
 <body>
-   
 <div class="everything" id="blur">
     <div class="sidebar">
         <div class="sidebar-brand">
@@ -119,7 +46,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
                 </li>
 
                 <li>
-                    <a href="plant_defects.php"><span class="las la-hospital"></span>
+                    <a href=""><span class="las la-hospital"></span>
                     <span>Plant Defects</span></a>
                 </li>
 
@@ -128,10 +55,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
                     <span>Cultivation areas</span></a>
                 </li>
 
-                <!-- <li>
-                    <a href="#"><span class="las la-calendar"></span>
-                    <span>Past Flight Videos</span></a>
-                </li> -->
                 <li>
                     <a href=""><span class="las la-camera"></span>
                     <span>Grid Layout Images</span></a>
@@ -144,8 +67,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
                 </li>
 
                 <li>
-                    <span><a href=""> <span class="las la-info"></span> 
-                    <a href="#" onclick="toggle()">Help</span></a>
+                    <span>
+                        <a href="#" style="display: inline-block;">
+                            <span class="las la-info" style="display: inline-block;"></span>
+                            <a href="#" onclick="toggle()" style="display: inline-block;">Help</a>
+                        </a>
+                    </span>
                 </li>
                 <br>
                 <br>
@@ -163,7 +90,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
     </div>
 
     <div class="main-content">
-   
         <header>
             <div class="header-title">
                 <h2><label  for="">
@@ -175,49 +101,45 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
         <br>
         <br>
         <br>
-        
-  
-<!-- <div style="position:relative;">
-  <video id="myVideo" width="850" height="540" controls>
-    <source src="" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <input type="file" id="myFile" name="filename" style="position:absolute; bottom:0; left:0;">
-  <label for="myFile" style="position:absolute; bottom:10; left:-5px; margin-top:540px;">Select a file</label>
-</div> -->
-
-<!-- 
-<form action="process_video.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="video" accept="video/*">
-    <button type="submit">Detect Objects</button>
-</form> -->
-
-<!-- <form action="process_video.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="video" accept="video/*" id="video-input" style="display: none;">
-    <button  type="button" onclick="document.getElementById('video-input').click();">Detect Objects</button> -->
-    <!-- <button type="submit">Upload</button> -->
-<!-- </form> -->
-
-<form action="process_video.php" method="POST" enctype="multipart/form-data">
-  <label for="video-input" id="video-label">
-    <span id="file-name"></span>
-    <button type="button" onclick="document.getElementById('video-input').click();" id="detect-objects-btn">Detect Objects</button>
-    
-  </label>
-  <button type="submit" id="upload-btn" style="display: none;">Upload</button>
-  <input type="file" name="video" accept="video/*" id="video-input" style="display: none;">
-</form>
+        <h3 class="detect_title">Detect Objects Here</h3>
+        <button class="upld-img-ml">Upload New Image</button>
+        <div class="container">
+            <input type="file" id="image-input" accept="image/*" hidden>
+            <div class="image-container"></div>
+        </div>
+        <button class="run-inference-btn" hidden>Run Inference</button>
 
 
-<!-- <form action="process_video.php" method="POST" enctype="multipart/form-data">
-    <input type="file" name="video" accept="video/*">
-    <button type="submit">Detect Objects</button>
-</form> -->
 
 
-        
 
-        <div class="popup_box">
+
+
+
+
+    <script>
+$(document).ready(function() {
+  $('.upld-img-ml').click(function() {
+    $('#image-input').click();
+  });
+
+  $('#image-input').change(function() {
+    var input = this;
+    var url = window.URL || window.webkitURL;
+    var img = new Image();
+    img.onload = function() {
+      $('.image-container').css('background-image', 'url(' + url.createObjectURL(input.files[0]) + ')');
+      $('.upld-img-ml').hide();
+      $('.run-inference-btn').show(); // Show the "run inference" button
+    }
+    img.src = url.createObjectURL(input.files[0]);
+  });
+});
+
+    </script>
+       
+
+       <div class="popup_box">
             <i class="las la-exclamation" aria-hidden="true"></i>
             <h1>Your drone would be flown!</h1>
             <label>Are you sure want to proceed?</label> 
@@ -228,6 +150,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
             </div> 
         </div>
     </div>
+
+
+
+
+
+
 </div>
 
 
@@ -236,6 +164,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
     <p>For more information on usage of the drone, kindly visit the following link for more information: www.ryzerobotics.com </p>
     <a href="#" class= "close-btn" onclick="toggle()">Close</a>
 </div>
+
+
+
+
+
+
+
 
 
 <script type="text/javascript">
@@ -249,93 +184,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
 </script>
 
 <script>
-    // Get the username from the URL query parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const username = urlParams.get('username');
-
-    // Display the username on the current page
-    document.addEventListener('DOMContentLoaded', function() {
-      const usernameElement = document.getElementById('mainName');
-      usernameElement.textContent = username;
-    });
-  </script>
-
-<!-- <script>
-function flyDrone() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4) {
-      if (this.status == 200) {
-        alert(this.responseText);
-      } else {
-        alert('Error: ' + this.status);
-      }
-    }
-  };
-  xhttp.onerror = function() {
-    alert('Network error.');
-  };
-  xhttp.open('GET', 'flydrone.php', true);
-  xhttp.send();
-} -->
-
-<!-- </script> -->
-
-<!-- <script>
-      function connectToDrone() {
-        // execute Python script to connect to drone
-        // code to connect to drone
-      }
-
-      function flyDrone() {
-        // execute Python script to fly drone
-        // open command prompt and prompt user for input
-        var spawn = require("child_process").spawn;
-        var process = spawn('python',["testingEcec.py"]);
-
-        // prompt user for input when script runs
-        process.stdout.on('data', function(data) {
-          console.log(data.toString());
-          if (data.toString().includes("Type 'command' to fly the drone")) {
-            // get user input
-            var input = prompt("Type 'command' to fly the drone");
-
-            // pass user input to Python script
-            process.stdin.write(input);
-          }
-        });
-      }
-</script> -->
-
-<script>
-    function actualflyDrone() {
-  // execute Python script to fly drone
-  const { spawn } = require("child_process");
-  const process = spawn('python', ['testingEcec.py']);
-
-  // prompt user for input when script runs
-  process.stdout.on('data', (data) => {
-    console.log(data.toString());
-    if (data.toString().includes("Type 'command' to fly the drone")) {
-      // get user input 
-      const input = prompt("Type 'command' to fly the drone");
-
-      // pass user input to Python script
-      process.stdin.write(input + "\n");
-    }
-  });
-}
-
-
-
-document.getElementById("flyBtn").addEventListener("click", function() {
-  // display confirmation popup
-  document.querySelector(".popup_box").style.display = "block";
-  
-  // execute flyDrone function when user confirms
-  document.querySelector(".btn2").addEventListener("click", flyDrone);
-});
-
 
 const fileInput = document.getElementById('myFile');
 const video = document.getElementById('myVideo');
@@ -346,7 +194,57 @@ fileInput.addEventListener('change', function() {
   video.src = url;
 });
 
+        $(document).ready(function() {
+    $('.click').click(function(event) {
+        event.preventDefault();
+        $('.popup_box').css({
+            "opacity": "1",
+            "pointer-events": "auto"
+        });
+    });
+    $('.btn1').click(function() {
+        $('.popup_box').css({
+            "opacity": "0",
+            "pointer-events": "none"
+        });
+    });
+    $('.btn2').click(function() {
+        $('.popup_box').css({
+            "opacity": "0",
+            "pointer-events": "none"
+        });
+        alert("Drone is in flight.");
+    });
+});
+</script>
+<script>
+  document.getElementById('imageUpload').addEventListener('change', function(event) {
+    const imageContainer = document.querySelector('.image-container');
+    const imageUploadBtn = document.querySelector('.image-upload-btn');
+    const uploadedImage = document.getElementById('uploadedImage');
+    const runInferenceBtn = document.getElementById('runInference');
 
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = function() {
+      uploadedImage.src = reader.result;
+      imageContainer.style.backgroundColor = 'transparent';
+      imageUploadBtn.style.display = 'none';
+      runInferenceBtn.style.display = 'block';
+    }
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      uploadedImage.src = '';
+    }
+  });
+
+  document.getElementById('runInference').addEventListener('click', function() {
+    // Add your inference logic here.
+    alert('Running inference...');
+  });
 </script>
 
 

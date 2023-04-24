@@ -1,12 +1,10 @@
 <?php 
-//session_start();
+session_start();
 
-//if (isset($_SESSION['username'])) {
-  //echo "Welcome, " . $_SESSION['username'] . "!";
-//} else {
- // header("Location: login.php");
-  //exit();
-//}
+if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
+  header("location: signUp.php");
+  exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +95,7 @@
                 </li>
 
                 <li>
-                    <a href=""><span class="las la-hospital"></span>
+                    <a href="plant_defects.php"><span class="las la-hospital"></span>
                     <span>Plant Defects</span></a>
                 </li>
 
@@ -121,17 +119,26 @@
                     <span class="click">Fly Drone</span></a>
                 </li>
 
+      
                 <li>
-                    <span><a href=""> <span class="las la-info"></span> 
-                    <a href="#" onclick="toggle()">Help</span></a>
+                    <span>
+                        <a href="#" style="display: inline-block;">
+                            <span class="las la-info" style="display: inline-block;"></span>
+                            <a href="#" onclick="toggle()" style="display: inline-block;">Help</a>
+                        </a>
+                    </span>
                 </li>
+
+              
+
+
                 <br>
                 <br>
                 
                 
                 
                 <li>
-                    <form action="login.php">
+                    <form action="./construction-company-website-template-free/index.php">
                         <button type="submit" id="logout-button">logout</button></a>   
                     </form>
                 </li>
@@ -160,18 +167,18 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Coconut Trees</th>
-				<th>Defective Trees</th>
-				<th>Healthy Trees</th>
-				<th>Unhealthy Trees</th>
+				<th>Coconut Tree No.</th>
+				<th>Defective Trees No.</th>
+				<th>Healthy Trees (%)</th>
+				<th>Unhealthy Trees (%)</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td>100</td>
-				<td>10</td>
-				<td>90</td>
-				<td>10%</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
 			</tr>
 		</tbody>
 	</table>
