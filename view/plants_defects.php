@@ -5,6 +5,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
   header("location: signUp.php");
   exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -102,18 +103,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
         <br>
         <br>
         <h3 class="detect_title">Detect Objects Here</h3>
-        <button class="upld-img-ml">Upload New Image</button>
-        <div class="container">
-            <input type="file" id="image-input" accept="image/*" hidden>
-            <div class="image-container"></div>
-        </div>
-        <button class="run-inference-btn" hidden>Run Inference</button>
 
-
-
-
-
-
+<form method="POST" action="process_inference.php">
+    <button class="upld-img-ml">Upload New Image</button>
+    <div class="container">
+        <input type="file" id="image-input" name="image" accept="image/*" hidden>
+        <div class="image-container"></div>
+    </div>
+    <button class="run-inference-btn" type="submit">Run Inference</button>
+</form>
 
 
 
@@ -180,14 +178,14 @@ $(document).ready(function() {
 
 <script>
 
-const fileInput = document.getElementById('myFile');
-const video = document.getElementById('myVideo');
+// const fileInput = document.getElementById('myFile');
+// const video = document.getElementById('myVideo');
 
-fileInput.addEventListener('change', function() {
-  const file = this.files[0];
-  const url = URL.createObjectURL(file);
-  video.src = url;
-});
+// fileInput.addEventListener('change', function() {
+//   const file = this.files[0];
+//   const url = URL.createObjectURL(file);
+//   video.src = url;
+// });
 
         $(document).ready(function() {
     $('.click').click(function(event) {
@@ -213,33 +211,33 @@ fileInput.addEventListener('change', function() {
 });
 </script>
 <script>
-  document.getElementById('imageUpload').addEventListener('change', function(event) {
-    const imageContainer = document.querySelector('.image-container');
-    const imageUploadBtn = document.querySelector('.image-upload-btn');
-    const uploadedImage = document.getElementById('uploadedImage');
-    const runInferenceBtn = document.getElementById('runInference');
+//   document.getElementById('imageUpload').addEventListener('change', function(event) {
+//     const imageContainer = document.querySelector('.image-container');
+//     const imageUploadBtn = document.querySelector('.image-upload-btn');
+//     const uploadedImage = document.getElementById('uploadedImage');
+//     const runInferenceBtn = document.getElementById('runInference');
 
-    const file = event.target.files[0];
-    const reader = new FileReader();
+//     const file = event.target.files[0];
+//     const reader = new FileReader();
 
-    reader.onloadend = function() {
-      uploadedImage.src = reader.result;
-      imageContainer.style.backgroundColor = 'transparent';
-      imageUploadBtn.style.display = 'none';
-      runInferenceBtn.style.display = 'block';
-    }
+//     reader.onloadend = function() {
+//       uploadedImage.src = reader.result;
+//       imageContainer.style.backgroundColor = 'transparent';
+//       imageUploadBtn.style.display = 'none';
+//       runInferenceBtn.style.display = 'block';
+//     }
 
-    if (file) {
-      reader.readAsDataURL(file);
-    } else {
-      uploadedImage.src = '';
-    }
-  });
+//     if (file) {
+//       reader.readAsDataURL(file);
+//     } else {
+//       uploadedImage.src = '';
+//     }
+//   });
 
-  document.getElementById('runInference').addEventListener('click', function() {
-    // Add your inference logic here.
-    alert('Running inference...');
-  });
+//   document.getElementById('runInference').addEventListener('click', function() {
+//     // Add your inference logic here.
+//     alert('Running inference...');
+//   });
 </script>
 
 

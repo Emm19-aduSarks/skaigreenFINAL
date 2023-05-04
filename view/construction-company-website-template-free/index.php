@@ -71,7 +71,7 @@
     <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
         <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
             <a href="index.html" class="navbar-brand">
-                <h1 class="m-0 display-4 text-lowercase text-white"><i class="bi bi-building text-primary me-2"></i>skaïgreen</h1>
+                <h1 class="m-0 display-4 text-lowercase text-white"><i class="bi bi-tree text-primary me-2"></i>skaïgreen</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -134,21 +134,21 @@
         <div class="row g-5" >
             <div class="col-lg-7">
                 <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Leader</span> in  Farm Automation</h1>
-                <h4 class="text-uppercase mb-3 text-body">Tempor erat elitr at rebum at at clita. Diam dolor diam ipsum tempor sit diam amet diam et eos labore</h4>
-                <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor</p>
+                <h4 class="text-uppercase mb-3 text-body">Transform Your Farming Business with Skaïgreen's Innovative Automation Technologies</h4>
+                <p>Skaïgreen automates farming processes with innovative technologies that save time, reduce costs, and increase yields. Our smart sensors, drones, and automated systems provide data-driven insights that help farmers make informed decisions and improve efficiency. Whether you're a small family farm or a large commercial operation, we're here to help you transform your business with the power of automation.</p>
                 <div class="row gx-5 py-2">
                     <div class="col-sm-6 mb-2">
                         <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Perfect Planning</p>
                         <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Professional Workers</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>First Working Process</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Comprehensive Working Process</p>
                     </div>
                     <div class="col-sm-6 mb-2">
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Perfect Planning</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Professional Workers</p>
-                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>First Working Process</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Timely Decision making</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Real Time Updates</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Affordable Pricing</p>
                     </div>
                 </div>
-                <p class="mb-4">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos labore</p>
+                <p class="mb-4">Come Work with us Today!</p>
                 <img src="img/signature.jpg" alt="">
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
@@ -270,12 +270,9 @@
                                 <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="img/testimonial-1.jpg" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
-                                <h4 class="text-uppercase mb-0">Client Name</h4>
-                                <p>Profession</p>
-                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i> Dolores sed duo
-                                    clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
-                                    lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit
-                                    ipsum.</p>
+                                <h4 class="text-uppercase mb-0">Samuel Osei</h4>
+                                <p>Farm Owner</p>
+                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>Skaïgreen's automation technologies have helped us improve efficiency and increase yields while reducing our environmental impact. We highly recommend their services to any farmers looking to modernize their operations."</p>
                             </div>
                         </div>
                         <div class="row gx-4 align-items-center">
@@ -283,12 +280,9 @@
                                 <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="img/testimonial-2.jpg" alt="">
                             </div>
                             <div class="col-xl-8 col-lg-7 col-md-7">
-                                <h4 class="text-uppercase mb-0">Client Name</h4>
-                                <p>Profession</p>
-                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i> Dolores sed duo
-                                    clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem
-                                    lorem magna ut labore et tempor diam tempor erat. Erat dolor rebum sit
-                                    ipsum.</p>
+                                <h4 class="text-uppercase mb-0">Sarah Amissah</h4>
+                                <p>Farm Owner</p>
+                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>Skaïgreen's automated irrigation system has significantly improved our water usage and crop yields while saving us time and labor costs. We highly recommend their innovative technologies to any farmers looking to optimize their irrigation and improve their bottom line.</p>
                             </div>
                         </div>
                     </div>
@@ -304,12 +298,12 @@
         <div class="row g-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>WEBUILD</h1>
+                    <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>SKAÏGREEM</h1>
                 </a>
-                <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                <p><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
+                <p>Let's get in touch!</p>
+                <p><i class="fa fa-map-marker-alt me-2"></i>23 Mankralo St.</p>
                 <p><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+                <p><i class="fa fa-envelope me-2"></i>skaigreen@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -339,14 +333,14 @@
                             <a class="text-white-50" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
                         </div>
                     </div>
-                    <div class="col-sm-12">
+                    <!-- <div class="col-sm-12">
                         <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
                         <div class="w-100">
                             <div class="input-group">
                                 <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -354,11 +348,11 @@
     <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                <p class="mb-0">&copy; <a class="text-primary" href="#">Skaïgreen</a>. All Rights Reserved.</p>
             </div>
-            <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+            <!-- <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
                 <p class="mb-0">Designed by <a class="text-dark" href="https://htmlcodex.com">HTML Codex</a></p>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Footer End -->
