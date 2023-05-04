@@ -5,7 +5,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require "../controller/dbcredentials.php";
+require "../config.php";
+
 
 // Create connection
 $conn = mysqli_connect($hostname, $username, $password, $dbname);

@@ -95,7 +95,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION["loggedin"] !== true) {
                 </li>
 
                 <li>
-                    <a href="plant_defects.php"><span class="las la-hospital"></span>
+                    <a href="plants_defects.php"><span class="las la-hospital"></span>
                     <span>Plant Defects</span></a>
                 </li>
 
